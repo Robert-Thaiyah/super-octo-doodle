@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Robert-Thaiyah/super-octo-doodle/static/css/main.da85350a.css",
-    "main.js": "/Robert-Thaiyah/super-octo-doodle/static/js/main.1ba0289d.js",
-    "static/media/about.jpg": "/Robert-Thaiyah/super-octo-doodle/static/media/about.32c1e0389be6cc6597d1.jpg",
-    "index.html": "/Robert-Thaiyah/super-octo-doodle/index.html",
-    "main.da85350a.css.map": "/Robert-Thaiyah/super-octo-doodle/static/css/main.da85350a.css.map",
-    "main.1ba0289d.js.map": "/Robert-Thaiyah/super-octo-doodle/static/js/main.1ba0289d.js.map"
+    "main.css": "/super-octo-doodle/static/css/main.5eb7ab3e.css",
+    "main.js": "/super-octo-doodle/static/js/main.1ba0289d.js",
+    "static/media/about.jpg": "/super-octo-doodle/static/media/about.32c1e0389be6cc6597d1.jpg",
+    "index.html": "/super-octo-doodle/index.html",
+    "main.5eb7ab3e.css.map": "/super-octo-doodle/static/css/main.5eb7ab3e.css.map",
+    "main.1ba0289d.js.map": "/super-octo-doodle/static/js/main.1ba0289d.js.map"
   },
   "entrypoints": [
-    "static/css/main.da85350a.css",
+    "static/css/main.5eb7ab3e.css",
     "static/js/main.1ba0289d.js"
   ]
 }
