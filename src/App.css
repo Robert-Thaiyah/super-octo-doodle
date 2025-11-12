@@ -1,38 +1,277 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Baskervville:ital,wght@0,400..700;1,400..700&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --primary: #03624c;
+  --secondary: #aacbc4;
+  --background: #f1f7f6;
+  --text: #fff;
+  --text-secondary: #94a3b8;
+  --accent: #d2b48c;
+  --black: #000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Inria Sans", sans-serif;
+  line-height: 1.9;
+  background-color: var(--background);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Baskervville", serif;
+}
+
+/* about area  */
+
+.image-cont {
+  background-image: url(/assets/about.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1500px;
+  height: 600px;
+  margin-right: 30px;
+}
+
+.hero-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero-details h2 {
+  text-align: start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-details p {
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+/* end of about area  */
+
+/* newsletter area  */
+
+.newsletter-main {
+  background-color: var(--primary);
+  height: 300px;
+  padding: 50px 10px;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.newsletter-main h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.newsletter-main h1 {
+  text-align: center;
+  color: var(--text);
+}
+
+.newsletter-main p {
+  text-align: center;
+  margin: 10px auto;
+  color: var(--text);
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+}
+/* end of newsletter area  */
+
+/* utility css */
+.container {
+  max-width: 1490px;
+  margin: 0 auto;
+  padding: 0 40px;
+  overflow: auto;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: var(--background);
+  color: var(--text-secondary);
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border: 1px var(--primary) solid;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--background);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  transition: all;
+}
+
+.btn-secondary {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px var(--primary) solid;
+  color: var(--background);
+}
+
+.btn-outline:hover {
+  background-color: var(--background);
+  color: var(--primary);
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  align-self: center;
+  place-content: space-between;
+}
+
+/* end of utility css  */
+
+/* mobile responsivenes */
+
+@media (max-width: 768px) {
+  .flex {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .image-cont {
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .btn {
+    width: 24rem;
+  }
+
+  .hero-area h6 {
+    font-size: larger;
+    text-align: center;
+  }
+
+  .hero-flex {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+
+  .hero-area h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .hero-area p {
+    text-align: center;
+  }
+  .hero-button {
+    display: grid;
+    justify-content: center;
+    place-self: center;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+
+  .hero-details {
+    margin: 10px;
+  }
+
+  .hero-details h2 {
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+
+  .hero-details p {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .newsletter-main {
+    height: auto;
+    margin-top: 20px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .newsletter-main h3 {
+    text-align: center;
+    color: var(--text);
+    line-height: normal;
+    margin-bottom: 10px;
+    font-size: medium;
+  }
+
+  .newsletter-main h1 {
+    text-align: center;
+    color: var(--text);
+    line-height: normal;
+    margin-bottom: 10px;
+    font-size: xx-large;
+  }
+
+  .newsletter-main p {
+    text-align: center;
+    color: var(--text);
+    line-height: normal;
+    margin-bottom: 10px;
   }
 }
+
+/* end of mobile responsivenes */
